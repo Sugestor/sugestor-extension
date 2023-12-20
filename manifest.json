@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Sugestor",
+  "description": "Sugestões de Inteligência Artificial direto no seu WhatsApp",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/dark-button.png",
+      "32": "assets/dark-button.png",
+      "48": "assets/dark-button.png",
+      "128": "assets/dark-button.png"
+    },
+    "default_title": "Sugestor"
+  },
+  "icons": {
+    "16": "assets/dark-button.png",
+    "32": "assets/dark-button.png",
+    "48": "assets/dark-button.png",
+    "128": "assets/dark-button.png"
+  },
+  "host_permissions": [
+    "http://*/",
+    "https://*/"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://chat.openai.com/;"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "debugger",
+    "webNavigation",
+    "webRequest",
+    "browsingData",
+    "declarativeNetRequest",
+    "cookies"
+  ]
+}
