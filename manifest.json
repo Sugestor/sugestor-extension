@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Sugestor",
   "description": "Sugestões de Inteligência Artificial direto no seu WhatsApp",
-  "version": "1.1",
+  "version": "1.0",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -40,15 +40,9 @@
     "service_worker": "js/background.js"
   },
   "permissions": [
-    "storage",
-    "activeTab",
     "scripting",
     "tabs",
-    "debugger",
     "webNavigation",
-    "webRequest",
-    "browsingData",
-    "declarativeNetRequest",
     "cookies"
   ]
 }
